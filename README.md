@@ -1,5 +1,7 @@
 # Gemini
 
+Gemini desktop
+
 ## TODO
 
 1. Markdown
