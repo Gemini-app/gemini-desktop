@@ -25,11 +25,21 @@
   amdRequire(['vs/editor/editor.main'], function() {
     var editor = monaco.editor.create(document.getElementById('container'), {
       value: [
-        'function x() {',
-        '\tconsole.log("Hello world!");',
-        '}',
+        '# title1',
+        '## title2',
+        '### title3',
+        '#### title4',
+        '##### title5',
+        '- list-item-1',
+        '- list-item-2',
+        '  * list-item-2.1',
+        '  * list-item-2.2',
+        '这是 `code` 一段代码',
+        '```js',
+        'var cod = fence();',
+        '```',
       ].join('\n'),
-      language: 'javascript',
+      language: 'markdown',
     });
   });
 })();
