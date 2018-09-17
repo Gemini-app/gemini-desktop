@@ -1,24 +1,23 @@
 {
-  "name": "Gemini",
+  "name": "gemini-desktop",
   "version": "1.0.0",
   "description": "Gemini desktop",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gemini-app/Gemini.git"
+    "url": "git+https://github.com/Gemini-app/gemini-desktop.git"
   },
   "keywords": [],
-  "author": "Enzo, Vivaxy",
-  "license": "ISC",
+  "author": "Enzo, vivaxy",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Gemini-app/Gemini/issues"
+    "url": "https://github.com/Gemini-app/gemini-desktop/issues"
   },
-  "homepage": "https://github.com/Gemini-app/Gemini#readme",
+  "homepage": "https://github.com/Gemini-app/gemini-desktop#readme",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron": "^2.0.9"
   }
 }
