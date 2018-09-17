@@ -1,0 +1,10 @@
+/**
+ * @since 20180917 13:51
+ * @author vivaxy
+ */
+
+body, html, #container {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
