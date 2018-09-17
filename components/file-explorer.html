@@ -1,0 +1,31 @@
+<template>
+  <style>
+    .gemini-file-explorer {
+      width: 120px;
+      background: #b23139;
+      color: #fff;
+      line-height: 120px;
+      height: 100%;
+    }
+  </style>
+  <div class="gemini-file-explorer">File explorer</div>
+</template>
+<script>
+  const fileExplorerDocument = document.currentScript.ownerDocument;
+
+  class FileExplorer extends HTMLElement {
+
+    static get TAG_NAME() {
+      return 'gemini-file-explorer';
+    }
+
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: 'closed' });
+      const content = fileExplorerDocument.querySelector('template').content.cloneNode(true);
+      shadow.appendChild(content);
+    }
+  }
+
+  customElements.define(FileExplorer.TAG_NAME, FileExplorer);
+</script>

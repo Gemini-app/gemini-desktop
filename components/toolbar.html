@@ -1,0 +1,32 @@
+<template>
+  <style>
+    .gemini-toolbar {
+      width: 100%;
+      height: 36px;
+      background: #2c0e0f;
+      color: #fff;
+      text-align: center;
+      line-height: 36px;
+    }
+  </style>
+  <div class="gemini-toolbar">Toolbar</div>
+</template>
+<script>
+  const toolbarDocument = document.currentScript.ownerDocument;
+
+  class Toolbar extends HTMLElement {
+
+    static get TAG_NAME() {
+      return 'gemini-toolbar';
+    }
+
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: 'closed' });
+      const content = toolbarDocument.querySelector('template').content.cloneNode(true);
+      shadow.appendChild(content);
+    }
+  }
+
+  customElements.define(Toolbar.TAG_NAME, Toolbar);
+</script>

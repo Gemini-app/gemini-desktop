@@ -4,10 +4,21 @@
   <meta charset="UTF-8">
   <title>Gemini Desktop</title>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="import" href="./components/editor.html">
+  <link rel="import" href="./components/file-explorer.html">
+  <link rel="import" href="./components/info-bar.html">
+  <link rel="import" href="./components/preview-panel.html">
+  <link rel="import" href="./components/toolbar.html">
 </head>
 
 <body>
-<div id="container"></div>
+<gemini-toolbar></gemini-toolbar>
+<div class="middle-panel">
+  <gemini-file-explorer></gemini-file-explorer>
+  <gemini-editor></gemini-editor>
+  <gemini-preview-panel></gemini-preview-panel>
+</div>
+<gemini-info-bar></gemini-info-bar>
 </body>
 
 <script src="./index.js"></script>

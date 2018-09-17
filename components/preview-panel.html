@@ -1,0 +1,28 @@
+<template>
+  <style>
+    .gemini-preview-panel {
+      background: #fa9ca9;
+      height: 100%;
+    }
+  </style>
+  <div class="gemini-preview-panel">Preview panel</div>
+</template>
+<script>
+  const previewPanelDocument = document.currentScript.ownerDocument;
+
+  class PreviewPanel extends HTMLElement {
+
+    static get TAG_NAME() {
+      return 'gemini-preview-panel';
+    }
+
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: 'closed' });
+      const content = previewPanelDocument.querySelector('template').content.cloneNode(true);
+      shadow.appendChild(content);
+    }
+  }
+
+  customElements.define(PreviewPanel.TAG_NAME, PreviewPanel);
+</script>

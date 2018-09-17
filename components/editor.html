@@ -1,0 +1,28 @@
+<template>
+  <style>
+    .gemini-editor {
+      background: #d0f5ff;
+      height: 100%;
+    }
+  </style>
+  <div class="gemini-editor">Editor</div>
+</template>
+<script>
+  const editorDocument = document.currentScript.ownerDocument;
+
+  class Editor extends HTMLElement {
+
+    static get TAG_NAME() {
+      return 'gemini-editor';
+    }
+
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: 'closed' });
+      const content = editorDocument.querySelector('template').content.cloneNode(true);
+      shadow.appendChild(content);
+    }
+  }
+
+  customElements.define(Editor.TAG_NAME, Editor);
+</script>

@@ -8,3 +8,33 @@ body, html, #container {
   width: 100%;
   height: 100%;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+gemini-toolbar {
+  flex: 0;
+}
+
+.middle-panel {
+  flex: 1;
+  display: flex;
+}
+
+gemini-info-bar {
+  flex: 0;
+}
+
+gemini-file-explorer {
+  flex: 0;
+}
+
+gemini-editor {
+  flex: 1;
+}
+
+gemini-preview-panel {
+  flex: 1;
+}

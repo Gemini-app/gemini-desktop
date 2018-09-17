@@ -1,0 +1,32 @@
+<template>
+  <style>
+    .gemini-info-bar {
+      width: 100%;
+      height: 20px;
+      background: #2c0e0f;
+      color: #fff;
+      text-align: center;
+      line-height: 20px;
+    }
+  </style>
+  <div class="gemini-info-bar">Info bar</div>
+</template>
+<script>
+  const infoBarDocument = document.currentScript.ownerDocument;
+
+  class InfoBar extends HTMLElement {
+
+    static get TAG_NAME() {
+      return 'gemini-info-bar';
+    }
+
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: 'closed' });
+      const content = infoBarDocument.querySelector('template').content.cloneNode(true);
+      shadow.appendChild(content);
+    }
+  }
+
+  customElements.define(InfoBar.TAG_NAME, InfoBar);
+</script>
