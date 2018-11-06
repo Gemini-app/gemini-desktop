@@ -7,6 +7,7 @@ Gemini desktop
 1. Markdown
 
     * https://github.com/dvcrn/markright
+    * https://sciter.com/html-notepad-is-out/
     
 3. Accredit github
 
